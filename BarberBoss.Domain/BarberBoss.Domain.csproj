@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Entities\NovaPasta\**" />
+		<EmbeddedResource Remove="Entities\NovaPasta\**" />
+		<None Remove="Entities\NovaPasta\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Reports\ResourceReportInvoiceGenerationMessage.fr-FR.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>ResourceReportInvoiceGenerationMessage.fr-FR.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Reports\ResourceReportInvoiceGenerationMessage.fr-FR.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>ResourceReportInvoiceGenerationMessage.fr-FR.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Reports\ResourceReportInvoiceGenerationMessage.resx">
+			<Generator>PublicResXFileCodeGenerator</Generator>
+			<LastGenOutput>ResourceReportInvoiceGenerationMessage.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+</Project>
